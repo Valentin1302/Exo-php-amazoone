@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    font-family: sans-serif;
+    background-color: #232f3e;
+    padding: 0 1rem;
+    padding-right: 0;
+}
+
+header p{
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+header p::first-letter{
+    color: rgb(255, 191, 0);
+}
+
+header a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 2rem 1.25rem;
+    font-size: 1.25rem;
+}
+
+header nav{
+    max-width: 1350px;
+    margin: auto;
+}
+
+header nav, header ul{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header a:hover{
+    background-color: rgb(255, 191, 0);
+    color: #232f3e;
+}
+
+main{
+    font-family: sans-serif;
+    max-width: 1350px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+main h1{
+    margin: 4rem 0;
+}
+
+main .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-top: solid 1px #D5DBDB;
+    border-left: solid 1px #D5DBDB;
+}
+
+main .card{
+    padding: 1.5rem;
+    border-right: solid 1px #D5DBDB;
+    border-bottom: solid 1px #D5DBDB;
+}
+
+main .card img{
+    margin: 2rem 0;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    transition: 0.15;
+}
+
+.card p.info{
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    background: rgb(204, 12, 57);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.card p.product{
+    font-size: 1.1rem;
+}
+
+footer{
+    margin-top: 4rem;
+    color: white;
+    font-family: sans-serif;
+    background-color: #232f3e;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
