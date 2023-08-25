@@ -23,8 +23,9 @@ if (!empty($conn)){
         $_SESSION["connected"]= TRUE;
     }
    else{
-        echo "Erreur de la requete";
-   }
+        echo "Erreur de la requete"; ?>
+        <button
+  <?php }
  
 }
 }

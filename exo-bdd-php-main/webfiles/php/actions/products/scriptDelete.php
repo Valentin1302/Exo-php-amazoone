@@ -18,6 +18,10 @@
 
         if($exec != false){
             echo "Suppression effectuée";
+
+            $redirection = 3;
+
+            $redirectionURL = "http://exo-bdd-php-main.test/webfiles/php/views/products/";
         }
         else{
             echo "Requête invalide";

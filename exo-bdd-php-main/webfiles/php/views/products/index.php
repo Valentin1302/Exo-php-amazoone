@@ -27,14 +27,30 @@
                 <li><a href="#">Nouveau</a></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">Beauté</a></li>
-                <li><a href="../../actions/connexion.php">Connexion</a></li>
+            <?php if(!empty($_SESSION) && $_SESSION["connected"] === TRUE){ ?>
+                    <li><a href="">Deconnexion</a></li>
+                    <?php }
+                    else{ ?>
+                        <li><a href="../users/connexionForm.php">Connexion</a></li>
+
+                   <?php } ?>
+                <li><a href="../users/inscriptionForm.php">S'inscrire</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Ventes flash et promotions</h1>
-        <div class="container">
+        <?php
+        if(!empty($_SESSION) && $_SESSION["connected"] === TRUE){ ?>
 
+<form action="./ajout.php" method="POST">
+    <button type="submit">Ajout de produit</button>
+</form>
+<?php }
+else{
+    
+}?>
+<div class="container">
 
             <!-- 
                 Modèle de carte HTML à afficher pour chaque article issu de la BDD
@@ -59,7 +75,7 @@
                 <?php
                 if(!empty($_SESSION) && $_SESSION["connected"] === TRUE){ ?>
 
-                    
+              
                     <form action="../../actions/products/scriptDelete.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $tuple["id"]; ?>">
                     <button type="submit">X</button>
